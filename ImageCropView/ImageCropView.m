@@ -8,8 +8,8 @@
 
 static CGFloat const DEFAULT_MASK_ALPHA = 0.75;
 static bool const square = NO;
-float IMAGE_MIN_HEIGHT = 400;
-float IMAGE_MIN_WIDTH = 400;
+float IMAGE_MIN_HEIGHT = 200;
+float IMAGE_MIN_WIDTH = 200;
 
 #pragma mark ImageCropViewController implementation
 
@@ -188,7 +188,7 @@ float IMAGE_MIN_WIDTH = 400;
 
 #pragma mark - MaskImageView implementation
 
-static CGFloat const DEFAULT_CONTROL_POINT_SIZE = 5;
+static CGFloat const DEFAULT_CONTROL_POINT_SIZE = 10;
 
 CGRect SquareCGRectAtCenter(CGFloat centerX, CGFloat centerY, CGFloat size) {
     CGFloat x = centerX - size / 2.0;
@@ -238,7 +238,7 @@ CGRect SquareCGRectAtCenter(CGFloat centerX, CGFloat centerY, CGFloat size) {
 
     //control points
     controlPointSize = DEFAULT_CONTROL_POINT_SIZE;
-    int initialClearAreaSize = self.frame.size.width / 5;
+    int initialClearAreaSize = self.frame.size.width / 2.5;
     CGPoint centerInView = CGPointMake(self.bounds.size.width / 2, self.bounds.size.height / 2);
     topLeftPoint = [self createControlPointAt:SquareCGRectAtCenter(centerInView.x - initialClearAreaSize,
                                                                    centerInView.y - initialClearAreaSize, 
